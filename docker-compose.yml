@@ -16,8 +16,8 @@ services:
       - config-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-discovery-server
       - CONTRAST__APPLICATION__GROUP=application_control_2
@@ -37,8 +37,8 @@ services:
      - discovery-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-customers-service
       - CONTRAST__APPLICATION__GROUP=application_control_2
@@ -58,8 +58,8 @@ services:
      - discovery-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-visits-service
       - CONTRAST__APPLICATION__GROUP=application_control_2
@@ -79,8 +79,8 @@ services:
      - discovery-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-vets-service
       - CONTRAST__APPLICATION__GROUP=application_control_2
@@ -100,8 +100,8 @@ services:
      - discovery-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-api-gateway
       - CONTRAST__APPLICATION__GROUP=application_control_2
@@ -128,8 +128,8 @@ services:
      - discovery-server
     environment:
       - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
-      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
-      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__API_KEY=
+      - CONTRAST__API__SERVICE_KEY=
       - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
       - CONTRAST__APPLICATION__NAME=spring-petclinic-admin-server
       - CONTRAST__APPLICATION__GROUP=application_control_2
