@@ -14,7 +14,17 @@ services:
     mem_limit: 512M
     depends_on:
       - config-server
-    entrypoint: ["./dockerize","-wait=tcp://config-server:8888","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-discovery-server
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro
+      - CONTRAST__SERVER__NAME=petclinic-discovery-server
+      - CONTRAST__SERVER__ENVIRONMENT=QA  
+    entrypoint: ["./dockerize","-wait=tcp://config-server:8888","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8761:8761
 
@@ -25,7 +35,17 @@ services:
     depends_on:
      - config-server
      - discovery-server
-    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-customers-service
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro
+      - CONTRAST__SERVER__NAME=petclinic-customers-service
+      - CONTRAST__SERVER__ENVIRONMENT=QA  
+    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
     - 8081:8081
 
@@ -36,7 +56,17 @@ services:
     depends_on:
      - config-server
      - discovery-server
-    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-visits-service
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro       
+      - CONTRAST__SERVER__NAME=petclinic-visits-service
+      - CONTRAST__SERVER__ENVIRONMENT=QA  
+    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8082:8082
 
@@ -47,7 +77,17 @@ services:
     depends_on:
      - config-server
      - discovery-server
-    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-vets-service
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro       
+      - CONTRAST__SERVER__NAME=petclinic-vets-service
+      - CONTRAST__SERVER__ENVIRONMENT=QA  
+    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8083:8083
 
@@ -58,7 +98,17 @@ services:
     depends_on:
      - config-server
      - discovery-server
-    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-api-gateway
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro       
+      - CONTRAST__SERVER__NAME=petclinic-api-gateway
+      - CONTRAST__SERVER__ENVIRONMENT=QA  
+    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8080:8080
 
@@ -66,8 +116,6 @@ services:
     image: openzipkin/zipkin
     container_name: tracing-server
     mem_limit: 512M
-    environment:
-    - JAVA_OPTS=-XX:+UnlockExperimentalVMOptions -Djava.security.egd=file:/dev/./urandom
     ports:
      - 9411:9411
 
@@ -78,7 +126,17 @@ services:
     depends_on:
      - config-server
      - discovery-server
-    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    environment:
+      - CONTRAST__API__URL=https://apptwo.contrastsecurity.com/Contrast
+      - CONTRAST__API__API_KEY=8P06mW4L6quvhK6gqXryFeZ9k5Ruyvnt
+      - CONTRAST__API__SERVICE_KEY=369TEAZ0AHSPIZU7
+      - CONTRAST__API__USER_NAME=agent_f7602ec5-41d9-4e32-87d1-71b8ebd183c9@SteveSmithOrganization
+      - CONTRAST__APPLICATION__NAME=spring-petclinic-admin-server
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS,contact=steve.smith@contrastsecurity.com,parentApplication=petclinic-micro      
+      - CONTRAST__SERVER__NAME=petclinic-admin-server
+      - CONTRAST__SERVER__ENVIRONMENT=QA
+    entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-javaagent:./contrast.jar", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 9090:9090
 
