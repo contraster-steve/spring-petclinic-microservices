@@ -10,9 +10,6 @@ RUN wget -O dockerize.tar.gz https://github.com/jwilder/dockerize/releases/downl
 RUN tar xzf dockerize.tar.gz
 RUN chmod +x dockerize
 
-# Download Contrast agent
-RUN wget -O ./contrast.jar https://repo1.maven.org/maven2/com/contrastsecurity/contrast-agent/4.7.0/contrast-agent-4.7.0.jar
-
 # wget is not installed on adoptopenjdk:11-jre-hotspot
 FROM adoptopenjdk:11-jre-hotspot
 
